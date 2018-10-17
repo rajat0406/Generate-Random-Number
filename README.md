@@ -20,12 +20,15 @@ An Intent is a messaging object you can use to request an action from another ap
 # 2. Button
 
   To display a button in an activity, add a button to the activity's layout XML file:
+   
 
  <Button
      android:id="@+id/button_id"
      android:layout_height="wrap_content"
      android:layout_width="wrap_content"
      android:text="@string/self_destruct" />
+     
+     
 To specify an action when the button is pressed, set a click listener on the button object in the corresponding activity code:
 
  public class MyActivity extends Activity {
@@ -42,4 +45,6 @@ To specify an action when the button is pressed, set a click listener on the but
          });
      }
  }
+ 
+ 
 The above snippet creates an instance of View.OnClickListener and wires the listener to the button using setOnClickListener(View.OnClickListener). As a result, the system executes the code you write in onClick(View) after the user presses the button.
